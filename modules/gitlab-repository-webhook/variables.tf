@@ -20,7 +20,7 @@ variable "gitlab_organization" {
 
 variable "atlantis_allowed_repo_names" {
   description = "List of names of repositories which belong to the organization specified in `gitlab_organization`"
-  type        = "list"
+  type        = list(string)
 }
 
 variable "webhook_url" {
@@ -32,3 +32,4 @@ variable "webhook_secret" {
   description = "Webhook secret"
   default     = ""
 }
+
